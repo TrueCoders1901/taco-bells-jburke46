@@ -8,14 +8,18 @@ namespace LoggingKata.Test
         [Fact]
         public void ShouldDoSomething()
         {
-            // TODO: Complete Something, if anything
+
         }
 
         [Theory]
-        [InlineData("Example")]
+        [InlineData("34.073638, -84.677017, TacoBellAcwort")]
         public void ShouldParse(string str)
         {
-            // TODO: Complete Should Parse
+            var tacoBellTest = new TacoParser();
+
+            ITrackable actual = tacoBellTest.Parse(str);
+
+            Assert.NotNull(actual);
         }
 
         [Theory]
